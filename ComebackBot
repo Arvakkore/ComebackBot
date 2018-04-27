@@ -1,0 +1,25 @@
+#!/bin/bash
+wget https://github.com/Arvakkore/ComebackBot/edit/master/comebackbot
+sleep 7 &
+PID=$!
+i=1
+sp="/-\|"
+echo -n ' '
+while [ -d /proc/$PID ]
+do
+  printf "\b${sp:i++%${#sp}:1}"
+done
+
+Range=500
+InsultNum=$Random
+let "InsultNum %= $Range"
+
+$Insult printf "Try me: "
+
+read $Insult
+
+if $Insult != "...";
+then
+	echo $InsultNum
+else
+	printf "that's what i thought"
