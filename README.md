@@ -1,2 +1,2 @@
 # ComebackBot
-a project for a rainy day
+a program with the purpose of offending humanity
